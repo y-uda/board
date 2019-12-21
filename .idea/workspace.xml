@@ -2,22 +2,43 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="09fc71e8-b8bc-448f-88b1-c411d09444f1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/views/boards/_board.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/boards/_form.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/boards/edit.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/boards/new.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/boards/show.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/initializers/time_formats.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/locales/ja.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/rails.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/rails.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/models/board_tag_relation.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/models/comment.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/models/tag.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/application/_header.html.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/comments/_comment.html.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/comments/_form.html.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/shared/_error_messages.html.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/migrate/20191221013106_create_comments.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/migrate/20191221091306_create_tags.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/migrate/20191221091517_create_board_tag_relations.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/tasks/auto_annotate_models.rake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/fixtures/board_tag_relations.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/fixtures/comments.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/fixtures/tags.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/models/board_tag_relation_test.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/models/comment_test.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/models/tag_test.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/boards.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/boards.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/boards_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/boards_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/helpers/application_helper.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/helpers/application_helper.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/board.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/board.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/boards/_board.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/boards/_board.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/boards/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/boards/_form.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/boards/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/boards/index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/application.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/application.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/boards/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/boards/show.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/environments/development.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/environments/development.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/locales/ja.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config/locales/ja.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db/seeds.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/seeds.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/fixtures/boards.yml" beforeDir="false" afterPath="$PROJECT_DIR$/test/fixtures/boards.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/models/board_test.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/models/board_test.rb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,6 +49,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Erb File" />
+        <option value="ERB File" />
       </list>
     </option>
   </component>
@@ -35,16 +57,19 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1V9zgILPm5ueIPF6pZQVOwvzsVl" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/views/shared" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -54,6 +79,14 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.ruby.settings.RubyActiveModuleSdkConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/views/shared" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/views/comments" />
+    </key>
   </component>
   <component name="RunManager" selected="Rake.spec: rails">
     <configuration name="Development: rails" type="RailsRunConfigurationType" factoryName="Rails">
@@ -184,11 +217,25 @@
       <workItem from="1576590760424" duration="3055000" />
       <workItem from="1576671873417" duration="6288000" />
       <workItem from="1576680224589" duration="3474000" />
+      <workItem from="1576851609264" duration="13614000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="404" y="243" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1576895180381">
+      <screen x="0" y="23" width="1440" height="828" />
+    </state>
+    <state x="404" y="243" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1440.828/-1360.23.1360.745@0.23.1440.828" timestamp="1576895180381" />
+    <state x="217" y="28" width="967" height="810" key="find.popup" timestamp="1576893005681">
+      <screen x="0" y="23" width="1440" height="828" />
+    </state>
+    <state x="217" y="28" width="967" height="810" key="find.popup/0.23.1440.828/-1360.23.1360.745@0.23.1440.828" timestamp="1576893005681" />
   </component>
   <component name="masterDetails">
     <states>
